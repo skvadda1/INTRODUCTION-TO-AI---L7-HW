@@ -4,12 +4,10 @@ image = cv2.imread('mysterious.jpg')
 if image is None:
     raise FileNotFoundError("404! FILE NOT FOUND")
 
-# Resize images properly
 image1 = cv2.resize(image, (200, 200))
 image2 = cv2.resize(image, (400, 400))
 image3 = cv2.resize(image, (600, 600))
 
-# Create resizable windows
 cv2.namedWindow('1st Image', cv2.WINDOW_NORMAL)
 cv2.namedWindow('2nd Image', cv2.WINDOW_NORMAL)
 cv2.namedWindow('3rd Image', cv2.WINDOW_NORMAL)
@@ -34,3 +32,4 @@ print(f"Image Dimensions:\n"
       f"Image 1: {image1.shape}\n"
       f"Image 2: {image2.shape}\n"
       f"Image 3: {image3.shape}")
+
